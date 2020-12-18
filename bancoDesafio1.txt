@@ -1,0 +1,45 @@
+CREATE TABLE `contas` (
+  `idConta` int NOT NULL AUTO_INCREMENT,
+  `idPessoa` int DEFAULT NULL,
+  `tipoConta` enum('Conta corrente','Conta poupança') DEFAULT NULL,
+  `saldo` decimal(10,2) DEFAULT '0',
+  `limieSaqueDiario` decimal(10,2) DEFAULT '800.00',
+  `flagAtivo` enum('Ativo','Inativo') DEFAULT 'Ativo',
+  `dataCriacao` datetime DEFAULT NULL,
+  `senha` varchar(32) DEFAULT NULL,
+  PRIMARY KEY (`idConta`),
+  KEY `idPessoa` (`idPessoa`),
+  CONSTRAINT `contas_ibfk_1` FOREIGN KEY (`idPessoa`) REFERENCES `pessoas` (`idPessoa`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `pessoas` (
+  `idPessoa` int AUTO_INCREMENT,
+  `nome` varchar(255) NOT NULL,
+  `cpf` varchar(255) NOT NULL,
+  `dataNascimento` date DEFAULT NULL,
+  PRIMARY KEY (`idPessoa`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `transacoes` (
+  `id` int AUTO_INCREMENT,
+  `idTransacao` int NOT NULL,
+  `idConta` int NOT NULL,
+  `valor` decimal(10,2) DEFAULT NULL,
+  `dataTransacao` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  CONSTRAINT `transacoes_ibfk_1` FOREIGN KEY (`idConta`) REFERENCES `contas` (`idConta`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,158 @@
+*{
+    font-family: sans-serif;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+body{
+    display: flex;
+    background: linear-gradient(45deg, rgb(5, 14, 19), rgb(30, 73, 94));
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: sans-serif;
+    justify-content: center;
+    align-items: center;
+} 
+
+.acesso{
+    background-color:rgba(0,0,0, 0.4);
+    border-radius: 10px;
+    width: 270px;
+    padding: 15px;
+    box-shadow: 10px 10px 35px rgba(0,0,0, 0.4);
+}
+
+.abrirConta{
+    width: 400px;
+}
+
+.acesso h2{
+    color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 3px 2px 5px rgba(0,0,0, 0.7);
+    user-select: none;
+    letter-spacing: 1px;
+}
+
+.acesso label{
+    display: block;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 5px rgba(0,0,0, 0.7);
+    user-select: none;
+    letter-spacing: 1px;
+}
+
+.acesso input{
+    display: block;
+    padding: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    outline: none;
+}
+
+.acesso select{
+    display: block;
+    padding: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.acesso input[type="submit"]{
+    display: flex;
+    color:white;
+    font-weight: bold;
+    cursor: pointer;
+    justify-content: center;
+    margin-top: 20px;
+    text-shadow: 1px 1px 5px rgba(0,0,0, 0.5);
+    border: 1px solid #fff;
+    background-color: #007900;
+    padding: 8px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    border-radius: 2px;
+}
+
+.linkAbrirConta{
+    display: flex;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: bold;
+    text-decoration: none;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.alert{
+    display: flex;
+    width: 270px;
+    justify-content: center;
+    color: red;
+    font-size: 1em;
+    letter-spacing: 1px;
+    padding: 10px;
+    margin-top: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* MENU PRINCIPAL */
+
+.menuPrincipal{
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.teclas {
+    display: flex;
+    margin: 10px;
+    padding: 20px;
+    background-color: yellow;
+    width: 260px;
+    border-radius: 15px;
+    justify-content: center;
+    cursor: pointer;  
+    user-select: none;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 5px rgba(0,0,0, 0.5);
+    text-decoration: none;
+
+}
+
+a{
+    color: black;
+}
+
+.dadosPessoais, .sair{
+    width: 100%;
+    margin: 10px 15px;
+}
+
+.navbar{
+    position: absolute;
+    top: 0px;
+    display:flex;
+    width: 100%;
+    height: 60px;
+    background-color: linear-gradient(45deg, rgba(255,255,255, 0.5), rgba(30, 73, 94, 0.5));
+    align-items: center;
+    box-shadow: 0px 10px 25px rgba(0,0,0, 0.5);
+}
+
+.navbar span{
+    display: flex;
+    position: absolute;
+    right: 20px;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 18px;
+    text-shadow: 1px 1px 5px rgba(0,0,0, 0.5);
+}
